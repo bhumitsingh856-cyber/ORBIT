@@ -21,10 +21,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 const App = () => {
   const router = createBrowserRouter([
-    {
-      path: "/a",
-      element: <SearchSKL />,
-    },
+
     {
       path: "/",
       element: <Home />,

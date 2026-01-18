@@ -5,7 +5,7 @@ import { useAuth } from "../context/context";
 import { useNavigate } from "react-router-dom";
 import Userslist from "./Userslist";
 import { FaEdit } from "react-icons/fa";
-import nopost from "../assets/nopost.png";
+import nopost from "../assets/nopost.svg";
 const Profilepage = ({
   data,
   post,

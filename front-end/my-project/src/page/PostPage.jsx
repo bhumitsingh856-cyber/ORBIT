@@ -9,7 +9,7 @@ import SKLpost from "../components/Skeletons/SKLpost.jsx";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-import nopost from "../assets/nopost.png";
+import nopost from "../assets/nopost.svg";
 import { useAuth } from "../context/context";
 const PostPage = () => {
   const { user } = useAuth();

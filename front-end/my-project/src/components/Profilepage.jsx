@@ -5,6 +5,7 @@ import { useAuth } from "../context/context";
 import { useNavigate } from "react-router-dom";
 import Userslist from "./Userslist";
 import { FaEdit } from "react-icons/fa";
+import nopost from "../assets/nopost.png";
 const Profilepage = ({
   data,
   post,
@@ -157,7 +158,7 @@ const Profilepage = ({
             ></Posts>
           ))
         ) : (
-          <img src="/src/assets/nopost.svg" alt="" />
+          <img src={nopost} alt="" />
         )}
       </div>
     </div>

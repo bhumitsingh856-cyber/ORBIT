@@ -26,10 +26,11 @@ const signup = async (req, res) => {
     );
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
-      sameSite: "Lax",
+      secure: true,
+      sameSite: "None",
       path: "/",
     });
+
     res.json({ success: true, message: "Signup successful" });
   } catch (error) {
     console.log(error);
@@ -62,10 +63,11 @@ const login = async (req, res) => {
     );
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
-      sameSite: "Lax",
+      secure: true,
+      sameSite: "None",
       path: "/",
     });
+
     res.json({ success: true, message: "Login successful", user: username });
   } catch (error) {
     console.log(error);

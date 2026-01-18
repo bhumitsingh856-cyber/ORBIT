@@ -42,7 +42,7 @@ const userSchema = new mongoose.Schema({
   profilePicture: {
     url:{
       type: String,
-      default: "http://localhost:3000/default.jpg",
+      default: `${process.env.EXPRESS_URL}/default.jpg`,
     },
     public_id: {
       type: String,

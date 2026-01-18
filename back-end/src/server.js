@@ -19,7 +19,7 @@ import { Server } from "socket.io";
 import { initializeSocket } from "./socket/socket.js";
 db();
 const app = express();
-const port = 3000;
+const port =process.env.PORT || 3000;
 const server = createServer(app);
 const io = new Server(server, {
   cors: {

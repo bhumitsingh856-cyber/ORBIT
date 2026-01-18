@@ -6,6 +6,8 @@ import api from "../service/api";
 import socket from "../socket";
 import { useAuth } from "../context/context.jsx";
 import timeAgo from "../service/timeago.js";
+
+import orbit from "../assets/orbit.png";
 const Messages = () => {
   const navigate = useNavigate();
   const [chatlists, setChatlists] = useState([]);
@@ -63,7 +65,7 @@ const Messages = () => {
           >
             <img
               className="w-10 h-10 object-cover  rounded-full"
-              src="/src/assets/orbit.png"
+              src={orbit}
               alt=""
             />
             <div className="flex flex-col w-full">

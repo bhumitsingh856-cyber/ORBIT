@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/context";
 import { useNavigate } from "react-router-dom";
 import Sure from "./Sure.jsx";
+import orbit from "../assets/orbit.png";
 const Sidebar = () => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
@@ -48,7 +49,7 @@ const Sidebar = () => {
             >
               <img
                 className="w-12 h-12 object-cover   rounded-full"
-                src="/src/assets/orbit.png"
+                src={orbit}
                 alt=""
               />
               <span className=" font-bold items-center text-6xl text-transparent bg-clip-text  bg-linear-to-r from-red-500  via-[#ffea00] to-[#00ffdd]">

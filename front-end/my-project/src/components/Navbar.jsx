@@ -8,6 +8,8 @@ import { CiSearch } from "react-icons/ci";
 import { useAuth } from "../context/context";
 import { MdLogout } from "react-icons/md";
 import Sure from "./Sure";
+
+import orbit from "../assets/orbit.png";
 const Navbar = () => {
   const { user, logout } = useAuth();
   const [title, setTitle] = useState("");
@@ -20,7 +22,7 @@ const Navbar = () => {
           <li className="flex items-center">
             <img
               className="w-7 h-7 object-cover   rounded-full"
-              src="/src/assets/orbit.png"
+              src={orbit}
               alt=""
             />
             <span className=" font-bold items-center  text-transparent bg-clip-text  bg-linear-to-r from-red-500  via-[#ffea00] to-[#00ffdd]">

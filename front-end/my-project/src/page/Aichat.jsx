@@ -8,6 +8,8 @@ import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import { motion } from "framer-motion";
+import timeAgo from "../service/timeago";
+import orbit from "../assets/orbit.png";
 const Aichat = () => {
   const [prompt, setPrompt] = useState("");
   const [message, setMessage] = useState([]);
@@ -23,17 +25,7 @@ const Aichat = () => {
       console.log(error);
     }
   };
-   function timeAgo(date) {
-      const diff = Date.now() - new Date(date);
-      const min = Math.floor(diff / 60000);
-      if (min < 1) return "just now";
-      if (min < 60) return `${min}min ago`;
-      const hr = Math.floor(min / 60);
-      if (hr < 24) return `${hr}hr ago`;
-      const day = Math.floor(hr / 24);
-      return `${day}day ago`;
-    }
-  
+ 
   useEffect(() => {
     getmessages();
   }, []);
@@ -74,7 +66,7 @@ const Aichat = () => {
         <div className="flex gap-2 p-2 rounded-b-lg items-center bg-linear-to-r from-gray-300 to-white">
           <img
             className="rounded-full h-10 w-10 object-cover"
-            src="/src/assets/orbit.png"
+            src={orbit}
             alt=""
           />
 
@@ -106,7 +98,7 @@ const Aichat = () => {
               <div className="flex gap-2 ">
                 <img
                   className="rounded-full md:h-10 md:w-10 w-7 h-7 object-cover"
-                  src="/src/assets/orbit.png"
+                  src={orbit}
                   alt="orbit ai"
                 />
                 <div className="shadow-2xl bg-linear-to-r border-2 border-blue-100 from-red-50 via-yellow-50 to-teal-50 p-3 rounded-lg max-w-2xl text-sm overflow-hidden">

@@ -10,10 +10,12 @@ function createStory({ show, setShow, getstory }) {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const [file, setFile] = useState([]);
   const [load, setLoad] = useState(false);
+  const [caption, setCaption] = useState("");
   const onSubmit = async (data) => {
     setLoad(true);
     if (data.caption.length === 0 && file.length === 0) {
@@ -37,8 +39,8 @@ function createStory({ show, setShow, getstory }) {
         });
         setShow(!show);
         setLoad(false);
+        reset();
         getstory();
-        setCaption("");
         setFile([]);
       }
     } catch (error) {
@@ -109,7 +111,7 @@ function createStory({ show, setShow, getstory }) {
                 Caption
               </label>
               <textarea
-                id="post"
+                id="post" 
                 name="post"
                 {...register("caption", {
                   maxLength: {

@@ -46,7 +46,7 @@ const App = () => {
       element: <Newpass />,
     },
     {
-      // element: <ProtectedRoute />,
+      element: <ProtectedRoute />,
       children: [
         {
           path: "/",

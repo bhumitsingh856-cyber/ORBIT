@@ -1,0 +1,10 @@
+import authcontroller from "../controller/authcontroller.js";
+import { Router } from "express";
+import isloggedin from "../middlewares/authrise.js";
+const authroute = Router();
+authroute.post("/signup", authcontroller.signup);
+authroute.post("/login", authcontroller.login);
+authroute.get("/logout",isloggedin, authcontroller.logout);
+authroute.post("/forgotpass",authcontroller.resetpass);
+authroute.post("/setnewpass",authcontroller.setnewpass);
+export default authroute;

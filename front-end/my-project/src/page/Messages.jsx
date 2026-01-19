@@ -72,7 +72,7 @@ const Messages = () => {
               <h1 className="font-bold flex justify-between text-xl ">
                 ORBIT AI
                 <span className="text-sm text-end">
-                  {timeAgo(aichat.updatedAt)}
+                  {!aichat.updatedAt ? "" : timeAgo(aichat.updatedAt)}
                 </span>
               </h1>
               <h1 className="text-gray-500 line-clamp-1 ">

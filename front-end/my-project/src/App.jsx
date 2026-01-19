@@ -1,6 +1,8 @@
 import React from "react";
 import { lazy, Suspense } from "react";
 import { RingLoader } from "react-spinners";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 const Layout = lazy(() => import("./components/Layout.jsx"));
 const Signup = lazy(() => import("./page/Signup.jsx"));
 const Home = lazy(() => import("./page/Home.jsx"));
@@ -17,8 +19,6 @@ const Search = lazy(() => import("./page/Search.jsx"));
 const Chats = lazy(() => import("./page/Chats.jsx"));
 const Aichat = lazy(() => import("./page/Aichat.jsx"));
 const SearchSKL = lazy(() => import("./components/Skeletons/SearchSKL.jsx"));
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
 const App = () => {
   const router = createBrowserRouter([
 

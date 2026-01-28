@@ -28,7 +28,7 @@ const Layout = () => {
     }
   }, [user, navigate]);
   return (
-    <div className="md:grid grid-cols-none md:grid-cols-3">
+    <div className="md:grid grid-cols-none md:grid-cols-3 bg-linear-to-r from-white via-white to-stone-200">
       <div className="flex justify-center col-span-1">
         <Sidebar></Sidebar>
         <Navbar></Navbar>

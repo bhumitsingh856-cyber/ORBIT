@@ -68,7 +68,7 @@ const Chats = () => {
   };
   return (
     <>
-      <div className="h-screen bg-center p-0.5 bg-linear-to-r via-blue-100 flex flex-col">
+      <div className="h-screen bg-center p-0.5 bg-linear-to-r via-purple-100 flex flex-col">
         {/* Header */}
         <div className="p-2 sticky top-0 bg-linear-to-r text-white from-teal-500 to-black rounded-full bg-no-repeat bg-cover flex justify-between shadow-2xl shrink-0 z-50">
           <div className="flex gap-2 items-center">

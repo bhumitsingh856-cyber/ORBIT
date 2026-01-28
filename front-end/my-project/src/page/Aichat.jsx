@@ -9,7 +9,7 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import { motion } from "framer-motion";
 import timeAgo from "../service/timeago";
-import orbit from "../assets/orbit.png";
+import orbit from "../assets/orbit.jpeg";
 const Aichat = () => {
   const [prompt, setPrompt] = useState("");
   const [message, setMessage] = useState([]);
@@ -150,7 +150,7 @@ const Aichat = () => {
           <div className="flex items-center gap-2 mb-4">
             <img
               className="rounded-full md:h-10 md:w-10 w-7 h-7 object-cover"
-              src="/src/assets/orbit.png"
+              src={orbit}
               alt="orbit ai"
             />
             <div className=" bg-linear-to-r border-2 border-blue-100 from-red-50 via-yellow-50 to-teal-50 p-4 rounded-lg">

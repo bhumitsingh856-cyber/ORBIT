@@ -9,7 +9,7 @@ import { useAuth } from "../context/context";
 import { MdLogout } from "react-icons/md";
 import Sure from "./Sure";
 
-import orbit from "../assets/orbit.png";
+import orbit from "../assets/orbit.jpeg";
 const Navbar = () => {
   const { user, logout } = useAuth();
   const [title, setTitle] = useState("");

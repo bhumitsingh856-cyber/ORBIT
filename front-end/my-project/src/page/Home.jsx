@@ -1,7 +1,7 @@
 import React from "react";
 import {lazy,Suspense} from "react"
 const Tdmodel=lazy(()=>import( "../components/Tdmodel"))
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 const Home = () => {
   return (
     <div id="font" className="w-fit">

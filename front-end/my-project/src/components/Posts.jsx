@@ -44,7 +44,10 @@ const Posts = ({ data, deletepost, likepost, setPosts }) => {
       >
         <div className="  flex flex-col gap-2 p-2 md:p-4  ">
           <div className="flex w-full justify-between">
-            <div className="flex items-center gap-2 md:gap-4">
+            <div
+              onClick={() => navigate(`/orbit/profile/${data.user.username}`)}
+              className="flex items-center gap-2 cursor-pointer md:gap-4"
+            >
               <img
                 loading="lazy"
                 className=" w-7 object-cover h-7 md:w-10 md:h-10 rounded-full "
@@ -52,12 +55,7 @@ const Posts = ({ data, deletepost, likepost, setPosts }) => {
                 alt="Profile"
               />
               <div className="flex flex-col">
-                <button
-                  onClick={() =>
-                    navigate(`/orbit/profile/${data.user.username}`)
-                  }
-                  className="text-l cursor-pointer hover:scale-105 duration-300 md:text-xl"
-                >
+                <button className="text-l  hover:scale-105 duration-300 md:text-xl">
                   {data.user.username}
                   {data.user.username === user.username && (
                     <span className="pl-2 font-light text-sm text-zinc-500">

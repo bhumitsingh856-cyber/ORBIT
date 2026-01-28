@@ -7,7 +7,7 @@ import socket from "../socket";
 import { useAuth } from "../context/context.jsx";
 import timeAgo from "../service/timeago.js";
 
-import orbit from "../assets/orbit.png";
+import orbit from "../assets/orbit.jpeg";
 const Messages = () => {
   const navigate = useNavigate();
   const [chatlists, setChatlists] = useState([]);

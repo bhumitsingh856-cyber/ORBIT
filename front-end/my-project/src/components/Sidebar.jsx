@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/context";
 import { useNavigate } from "react-router-dom";
 import Sure from "./Sure.jsx";
-import orbit from "../assets/orbit.png";
+import orbit from "../assets/orbit.jpeg";
 const Sidebar = () => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
@@ -48,7 +48,7 @@ const Sidebar = () => {
               className="flex gap-2  items-center cursor-pointer p-4 "
             >
               <img
-                className="w-12 h-12 object-cover   rounded-full"
+                className="w-12 h-12 object-cover border-2 border-black rounded-full"
                 src={orbit}
                 alt=""
               />
@@ -115,7 +115,7 @@ const Sidebar = () => {
                 className="flex hover:bg-linear-to-r from-red-500  via-[#ffea00] to-[#00ffdd] p-2 rounded-xl gap-4 font-bold items-center text-xl"
               >
                 <img
-                  className="h-7 object-cover rounded-full w-7"
+                  className="h-7 object-cover border-2 border-white rounded-full w-7"
                   src={user?.profilepic.url}
                   alt=""
                 />
@@ -148,7 +148,7 @@ const Sidebar = () => {
           >
             <div className="flex z-10  items-center gap-3">
               <img
-                className="w-13 h-13 ml-1 object-cover rounded-full"
+                className="w-13 h-13 ml-1 border-2 border-white object-cover rounded-full"
                 src={user?.profilepic.url}
                 alt=""
               />

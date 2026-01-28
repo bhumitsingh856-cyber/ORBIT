@@ -10,9 +10,11 @@ const Passreset = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
+    toast.loading("Sending mail...", { position: "top-left" });
     try {
       const req = await api.post( "/auth/forgotpass", data );
       if (req.data.success) {
+        toast.dismiss();
         toast.success(`${req.data.message}`, { position: "top-left" });
       } else {
         toast.warn(`${req.data.message}`, { position: "top-left" });

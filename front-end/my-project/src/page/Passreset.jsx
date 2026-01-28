@@ -13,13 +13,14 @@ const Passreset = () => {
     toast.loading("Sending mail...", { position: "top-left" });
     try {
       const req = await api.post( "/auth/forgotpass", data );
+      toast.dismiss();
       if (req.data.success) {
-        toast.dismiss();
         toast.success(`${req.data.message}`, { position: "top-left" });
       } else {
         toast.warn(`${req.data.message}`, { position: "top-left" });
       }
     } catch (error) {
+
       toast.error("Something went wrong ! ");
     }
   };
